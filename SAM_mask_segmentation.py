@@ -6,6 +6,7 @@ import cv2
 import torch
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator
 
+# SAM h-model
 sam_checkpoint = "sam_vit_h_4b8939.pth"
 model_type = "vit_h"
 
@@ -55,4 +56,3 @@ plt.show()
 
 result_image = Image.fromarray(overlay)
 result_image.save("segmented_highway_cars.png")
-print("Saved the segmented image as 'segmented_highway_cars.png'")
